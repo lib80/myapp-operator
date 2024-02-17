@@ -1,0 +1,15 @@
+apiVersion: apps.leon.com/v1alpha1
+kind: MyApp
+metadata:
+  labels:
+    app.kubernetes.io/name: myapp
+    app.kubernetes.io/instance: myapp-sample
+    app.kubernetes.io/part-of: myapp-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: myapp-operator
+  name: myapp-sample
+spec:
+  replicas: 5
+  image: nginx:1.24.0
+  ports:
+    - 80
